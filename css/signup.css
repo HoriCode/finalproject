@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.signup-container {
+    display: flex;
+    gap: 20px;
+}
+
+.signup-left {
+    background: #b0b0b0;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+.signup-left h2 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+.signup-right {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    flex: 1;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.signup-right h3 {
+    font-size: 24px;
+    color: #999;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row-full {
+    margin-bottom: 15px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field input,
+.form-field select {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #666;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-field input::placeholder {
+    color: #bbb;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background: #b0b0b0;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.signup-button:hover {
+    background: #999;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-left {
+        min-width: auto;
+        min-height: 100px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-right {
+        padding: 30px 20px;
+    }
+}
